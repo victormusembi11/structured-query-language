@@ -20,3 +20,17 @@ CREATE TABLE Employee (
 
 -- Alter table for not null
 ALTER TABLE Employee MODIFY COLUMN salary INT NOT NULL;
+
+-- Unique Constraints
+CREATE TABLE Manager (
+    manager_id INT NOT NULL UNIQUE,
+    email_address VARCHAR(255) NOT NULL UNIQUE
+);
+
+-- table description:
+-- +---------------+--------------+------+-----+---------+-------+
+-- | Field         | Type         | Null | Key | Default | Extra |
+-- +---------------+--------------+------+-----+---------+-------+
+-- | manager_id    | int          | NO   | PRI | NULL    |       |
+-- | email_address | varchar(255) | NO   | UNI | NULL    |       |
+-- +---------------+--------------+------+-----+---------+-------+
