@@ -88,3 +88,9 @@ CREATE TABLE Manager (
 -- | manager_id    | int          | NO   | PRI | NULL    |       |
 -- | email_address | varchar(255) | NO   |     | NULL    |       |
 -- +---------------+--------------+------+-----+---------+-------+
+
+-- Alter table to set primary key
+ALTER TABLE Employee ADD PRIMARY KEY (emp_id);
+
+-- Delete a primary key constraint
+ALTER TABLE Employee DROP PRIMARY KEY;
