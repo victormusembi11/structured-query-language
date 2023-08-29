@@ -52,3 +52,13 @@ CREATE TABLE Manager (
 
 -- Alter table to set constraint
 ALTER TABLE Employee ADD UNIQUE (emp_id, email_address);
+
+-- Drop a unique constraint
+ALTER TABLE Manager DROP INDEX UC_Manager;
+
+-- Previous schema (note UC_Manager):
+-- CREATE TABLE Manager (
+--     manager_id INT NOT NULL,
+--     email_address VARCHAR(255) NOT NULL,
+--     CONSTRAINT UC_Manager UNIQUE (manager_id, email_address)
+-- );
