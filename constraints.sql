@@ -17,3 +17,6 @@ CREATE TABLE Employee (
 -- | email_address | varchar(150) | NO   |     | NULL    |       |
 -- | salary        | int          | YES  |     | NULL    |       |
 -- +---------------+--------------+------+-----+---------+-------+
+
+-- Alter table for not null
+ALTER TABLE Employee MODIFY COLUMN salary INT NOT NULL;
