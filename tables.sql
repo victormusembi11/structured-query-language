@@ -66,7 +66,7 @@ CREATE TABLE Manager AS SELECT email_address, salary FROM Employee WHERE salary 
 -- | johndoe@example.com |  10000 |
 -- +---------------------+--------+
 
--- Droping a Table
+-- Deleting a Table
 DROP TABLE Manager;
 
 -- Alter Table
