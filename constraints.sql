@@ -34,3 +34,18 @@ CREATE TABLE Manager (
 -- | manager_id    | int          | NO   | PRI | NULL    |       |
 -- | email_address | varchar(255) | NO   | UNI | NULL    |       |
 -- +---------------+--------------+------+-----+---------+-------+
+
+-- Unique Constraint on multiple columns
+CREATE TABLE Manager (
+    manager_id INT NOT NULL,
+    email_address VARCHAR(255) NOT NULL,
+    CONSTRAINT UC_Manager UNIQUE (manager_id, email_address)
+);
+
+-- table description:
+-- +---------------+--------------+------+-----+---------+-------+
+-- | Field         | Type         | Null | Key | Default | Extra |
+-- +---------------+--------------+------+-----+---------+-------+
+-- | manager_id    | int          | NO   | PRI | NULL    |       |
+-- | email_address | varchar(255) | NO   | PRI | NULL    |       |
+-- +---------------+--------------+------+-----+---------+-------+
