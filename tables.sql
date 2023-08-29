@@ -46,3 +46,22 @@ CREATE TABLE Manager AS SELECT email_address, salary FROM Employee;
 -- | email_address | varchar(150) | YES  |     | NULL    |       |
 -- | salary        | int          | YES  |     | NULL    |       |
 -- +---------------+--------------+------+-----+---------+-------+
+
+-- Creating a table using another table and also copying the data based on a condition
+-- In this case were copying only the employees who have a salary more than 5000
+CREATE TABLE Manager AS SELECT email_address, salary FROM Employee WHERE salary > 5000;
+
+-- table description:
+-- +---------------+--------------+------+-----+---------+-------+
+-- | Field         | Type         | Null | Key | Default | Extra |
+-- +---------------+--------------+------+-----+---------+-------+
+-- | email_address | varchar(150) | YES  |     | NULL    |       |
+-- | salary        | int          | YES  |     | NULL    |       |
+-- +---------------+--------------+------+-----+---------+-------+
+
+-- Data in table - SELECT * FROM Manager;
+-- +---------------------+--------+
+-- | email_address       | salary |
+-- +---------------------+--------+
+-- | johndoe@example.com |  10000 |
+-- +---------------------+--------+
