@@ -68,3 +68,15 @@ CREATE TABLE Manager AS SELECT email_address, salary FROM Employee WHERE salary 
 
 -- Droping a Table
 DROP TABLE Manager;
+
+-- Alter Table
+-- used to add, change or delete columns in an existing table.
+
+-- Add column
+ALTER TABLE Employee ADD age INT;
+
+-- Delete column
+ALTER TABLE Employee DROP COLUMN age;
+
+-- Modify column data type
+ALTER TABLE Employee MODIFY COLUMN salary DECIMAL;
