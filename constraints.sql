@@ -49,3 +49,6 @@ CREATE TABLE Manager (
 -- | manager_id    | int          | NO   | PRI | NULL    |       |
 -- | email_address | varchar(255) | NO   | PRI | NULL    |       |
 -- +---------------+--------------+------+-----+---------+-------+
+
+-- Alter table to set constraint
+ALTER TABLE Employee ADD UNIQUE (emp_id, email_address);
