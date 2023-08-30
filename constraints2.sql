@@ -55,3 +55,13 @@ CREATE TABLE Orders (
 -- | OrderNumber | int  | NO   |     | NULL    |       |
 -- | PersonID    | int  | YES  | MUL | NULL    |       |
 -- +-------------+------+------+-----+---------+-------+
+
+-- Alter table to add foreign key
+
+CREATE TABLE Orders (
+    OrderID INT NOT NULL PRIMARY KEY,
+    OrderNumber INT NOT NULL,
+    PersonID INT
+);
+
+ALTER TABLE Orders ADD FOREIGN KEY (PersonID) REFERENCES Person(PersonID);
