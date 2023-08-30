@@ -28,3 +28,30 @@ ALTER TABLE Employee ADD PRIMARY KEY (emp_id);
 
 -- Delete a primary key constraint
 ALTER TABLE Employee DROP PRIMARY KEY;
+
+-- Foreign Key
+-- This is used to prevent actions that would destroy links between tables
+-- The foreign key is a field in one table that refers to another primary key another table
+
+CREATE TABLE Person (
+    PersonID INT NOT NULL PRIMARY KEY,
+    FirstName VARCHAR(255) NOT NULL,
+    LastName VARCHAR(255) NOT NULL,
+    Age INT NOT NULL
+);
+
+CREATE TABLE Orders (
+    OrderID INT NOT NULL PRIMARY KEY,
+    OrderNumber INT NOT NULL,
+    PersonID INT,
+    FOREIGN KEY (PersonID) REFERENCES Person(PersonID)
+);
+
+-- table description
+-- +-------------+------+------+-----+---------+-------+
+-- | Field       | Type | Null | Key | Default | Extra |
+-- +-------------+------+------+-----+---------+-------+
+-- | OrderID     | int  | NO   | PRI | NULL    |       |
+-- | OrderNumber | int  | NO   |     | NULL    |       |
+-- | PersonID    | int  | YES  | MUL | NULL    |       |
+-- +-------------+------+------+-----+---------+-------+
