@@ -73,3 +73,23 @@ ALTER TABLE Orders ADD CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID) REFERENC
 -- Delete a foreign key
 
 ALTER TABLE Orders DROP FOREIGN KEY FK_PersonOrder;
+
+-- Default Constraint
+-- Used to set a default value for a column
+
+CREATE TABLE Profile (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(150) NOT NULL,
+    account_type VARCHAR(50) DEFAULT 'private',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- table description:
+-- +--------------+--------------+------+-----+-------------------+-------------------+
+-- | Field        | Type         | Null | Key | Default           | Extra             |
+-- +--------------+--------------+------+-----+-------------------+-------------------+
+-- | Id           | int          | NO   | PRI | NULL              | auto_increment    |
+-- | email        | varchar(150) | NO   |     | NULL              |                   |
+-- | account_type | varchar(50)  | YES  |     | private           |                   |
+-- | created_at   | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+-- +--------------+--------------+------+-----+-------------------+-------------------+
