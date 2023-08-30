@@ -69,3 +69,7 @@ ALTER TABLE Orders ADD FOREIGN KEY (PersonID) REFERENCES Person(PersonID);
 -- Alter table to add foreign key name foreign key constraint
 
 ALTER TABLE Orders ADD CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID) REFERENCES Person(PersonID);
+
+-- Delete a foreign key
+
+ALTER TABLE Orders DROP FOREIGN KEY FK_PersonOrder;
