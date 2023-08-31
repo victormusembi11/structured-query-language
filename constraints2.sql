@@ -121,3 +121,32 @@ ALTER TABLE Profile ALTER account_type DROP DEFAULT;
 -- | account_type | varchar(50)  | YES  |     | NULL              |                   |
 -- | created_at   | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
 -- +--------------+--------------+------+-----+-------------------+-------------------+
+
+-- Auto Increment Constraint
+-- For it to be auto increment, it has to be a primary key
+
+CREATE TABLE Employee (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(150)
+);
+
+-- table description:
+-- +-------+--------------+------+-----+---------+----------------+
+-- | Field | Type         | Null | Key | Default | Extra          |
+-- +-------+--------------+------+-----+---------+----------------+
+-- | ID    | int          | NO   | PRI | NULL    | auto_increment |
+-- | email | varchar(150) | YES  |     | NULL    |                |
+-- +-------+--------------+------+-----+---------+----------------+
+
+-- Alter table to set starting point for auto increment
+
+ALTER TABLE Employee AUTO_INCREMENT=100;
+
+INSERT INTO Employee (email) VALUES ("johndoe@example.com");
+
+-- table data:
+-- +-----+---------------------+
+-- | ID  | email               |
+-- +-----+---------------------+
+-- | 100 | johndoe@example.com |
+-- +-----+---------------------+
