@@ -107,3 +107,17 @@ ALTER TABLE Profile ALTER account_type SET DEFAULT 'public';
 -- | account_type | varchar(50)  | YES  |     | public            |                   |
 -- | created_at   | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
 -- +--------------+--------------+------+-----+-------------------+-------------------+
+
+-- ALter table to delete default constraint
+
+ALTER TABLE Profile ALTER account_type DROP DEFAULT;
+
+-- table description:
+-- +--------------+--------------+------+-----+-------------------+-------------------+
+-- | Field        | Type         | Null | Key | Default           | Extra             |
+-- +--------------+--------------+------+-----+-------------------+-------------------+
+-- | Id           | int          | NO   | PRI | NULL              | auto_increment    |
+-- | email        | varchar(150) | NO   |     | NULL              |                   |
+-- | account_type | varchar(50)  | YES  |     | NULL              |                   |
+-- | created_at   | timestamp    | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+-- +--------------+--------------+------+-----+-------------------+-------------------+
