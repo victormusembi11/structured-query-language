@@ -20,6 +20,8 @@ brew install mysql
 
 ## Logging into MySQL
 
+By default the username is root and there's no password so when you are prompted for the password just press enter.
+
 ```bash
 sudo mysql -u root -p
 ```
